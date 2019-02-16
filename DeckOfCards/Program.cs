@@ -9,6 +9,10 @@ namespace DeckOfCards
             // Create a deck cards.
             Deck deck = new Deck();
 
+            for (int i = 0; i < deck.Cards.Length; i++)
+            {
+                Console.WriteLine(deck.Cards[i].GetFullName());
+            }
             // Draw a card.
             var card = deck.Draw();
 

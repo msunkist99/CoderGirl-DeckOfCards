@@ -70,10 +70,9 @@ namespace DeckOfCards
         {
             Random random = new Random();
 
-            int randomNumber = random.Next(0, 53);
-                        
             // TODO: Return a random card from the deck.
-            return Cards[randomNumber];
+            return Cards[random.Next(0, 53)];
+
         }
     }
 }

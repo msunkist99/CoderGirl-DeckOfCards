@@ -4,13 +4,12 @@ namespace DeckOfCards
 {
     public class Deck
     {
-        private Random _random;
+        public Card[] Cards { get; set; }
 
         public Deck()
         {
             Card[] deckOfCards = new Card[52];
             int cardCount = 0;
-            _random = new Random();
 
             string suit;
 
@@ -69,14 +68,14 @@ namespace DeckOfCards
             Cards = deckOfCards;
         }
 
-        public Card[] Cards { get; set; }
-
         public Card Draw()
         {
-            int random = _random.Next(0, 53);
+            Random random = new Random();
+
+            int randomNumber = random.Next(0, 53);
                         
             // TODO: Return a random card from the deck.
-            return Cards[random];
+            return this.Cards[randomNumber];
         }
     }
 }

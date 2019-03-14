@@ -17,7 +17,7 @@ namespace DeckOfCards
             */
 
             // Draw a card.
-            var card = deck.Draw();
+            Card card = deck.Draw();
 
             // Show the value.
             Console.WriteLine(card.GetFullName());

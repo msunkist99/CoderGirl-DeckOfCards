@@ -8,7 +8,7 @@ namespace DeckOfCards
 
         public Deck()
         {
-            Card[] deckOfCards = new Card[52];
+            Cards = new Card[52];
             int cardCount = 0;
 
             string suit;
@@ -60,12 +60,10 @@ namespace DeckOfCards
                         card.FaceValue = j.ToString();
                     }
 
-                    deckOfCards[cardCount] = card;
+                    Cards[cardCount] = card;
                     cardCount++;
                 }
             }
-
-            Cards = deckOfCards;
         }
 
         public Card Draw()
@@ -75,7 +73,7 @@ namespace DeckOfCards
             int randomNumber = random.Next(0, 53);
                         
             // TODO: Return a random card from the deck.
-            return this.Cards[randomNumber];
+            return Cards[randomNumber];
         }
     }
 }
